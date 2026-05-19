@@ -117,11 +117,11 @@ Ambient sound effects and smooth cinematic animations create the feeling of bein
 
 #  Screenshots
 
-(./main page.png)                                   
-(./NASA.png)
-(./ISS.png)
-(./Planet.png)
-(./AI.png)
+(./"C:\Users\User\Pictures\Screenshots\main page.png")                                   
+(./"C:\Users\User\Pictures\Screenshots\NASA.png")
+(./"C:\Users\User\Pictures\Screenshots\ISS.png")
+(./"C:\Users\User\Pictures\Screenshots\Planet.png")
+(./"C:\Users\User\Pictures\Screenshots\AI.png")
 
 ---
 
