@@ -117,9 +117,11 @@ Ambient sound effects and smooth cinematic animations create the feeling of bein
 
 #  Screenshots
 
-## 🌌 Landing Page
-
-![Cosmos Landing](./cosmos_landing.png)
+(./main page.png)                                   
+(./NASA.png)
+(./ISS.png)
+(./Planet.png)
+(./AI.png)
 
 ---
 
