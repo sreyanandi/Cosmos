@@ -1,0 +1,12 @@
+{
+  "name": "cosmos-explorer-root",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
+    "frontend": "npm run dev --prefix frontend",
+    "backend": "npm run dev --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
