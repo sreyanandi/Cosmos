@@ -4,7 +4,7 @@
 
 ### *“What if space exploration felt less like browsing a website and more like traveling through the universe itself?”* 
 
-A high-fidelity interactive Space and Universe Explorer project built using React, TypeScript, Vite, and modern web technologies. Embark on a journey through realistic procedural 3D planets, track the ISS in real-time, explore historical timelines, quiz your cosmic knowledge, and consult with ORACLE, your AI Space Drone assistant.
+A high-fidelity interactive Space and Universe Explorer project built using React, TypeScript, Vite, and modern web technologies. Embark on a journey through realistic procedural 3D planets, track the ISS in real-time, explore historical timelines, and quiz your cosmic knowledge.
 
 </div>
 
@@ -12,7 +12,7 @@ A high-fidelity interactive Space and Universe Explorer project built using Reac
 
 #  About COSMOS
 
-COSMOS Explorer is an interactive universe exploration platform designed to transform the way users experience space on the web.
+COSMOS Explorer is an universe exploration platform designed to transform the way users experience space on the web.
 
 Instead of simply displaying information, COSMOS creates a cinematic and immersive digital universe where users can:
 
@@ -20,7 +20,6 @@ Instead of simply displaying information, COSMOS creates a cinematic and immersi
 - Experience galaxy and black hole simulations
 - Track the International Space Station live
 - View NASA’s Astronomy Picture of the Day
-- Interact with an AI-powered space assistant
 - Learn through quizzes and timelines
 - Enjoy futuristic visuals, animations, and ambient soundscapes
 
@@ -62,11 +61,6 @@ Track the live movement and coordinates of the International Space Station as it
 
 ##  NASA APOD Integration
 Displays NASA’s Astronomy Picture of the Day directly using NASA Open APIs.
-
----
-
-##  AI Space Assistant
-An integrated AI assistant capable of answering space-related questions and cosmic facts.
 
 ---
 
