@@ -10,73 +10,92 @@ import { createProceduralTexture, createRingTexture } from '../utils/proceduralT
 
 // Simplified PLANET_DETAILS for storytelling
 const STORY_DATA: Record<string, any> = {
-  Mercury: { 
-    color: '#8c8c8c', 
-    radius: 1.5, 
-    story: "Mercury, the silent iron core of the inner system, sits baked by solar winds. Discovered in ancient times, it remains a world of extreme contrasts—where days reach a blistering 800 degrees Fahrenheit, and nights plummet to minus 290. Probes like Mariner 10 and NASA's MESSENGER revealed a highly active volcanic past and vast water ice deposits hiding deep inside shadowed polar craters." 
+  Mercury: {
+    color: '#8c8c8c',
+    radius: 1.5,
+    story: "Mercury, the silent iron core of the inner system, sits baked by solar winds. Discovered in ancient times, it remains a world of extreme contrasts—where days reach a blistering 800 degrees Fahrenheit, and nights plummet to minus 290. Probes like Mariner 10 and NASA's MESSENGER revealed a highly active volcanic past and vast water ice deposits hiding deep inside shadowed polar craters."
   },
-  Venus: { 
-    color: '#e3bb76', 
-    radius: 2, 
-    story: "Venus is Earth's toxic twin, a hellish sphere cloaked in sulfurous clouds. Beneath its thick carbon dioxide canopy lies a runaway greenhouse nightmare with a crushing pressure ninety times that of Earth. Soviet Venera landers in the 1970s braved the acid rain to reveal Venus's volcanic geology, sending back historic panoramic views before melting under the extreme 900-degree surface heat." 
+  Venus: {
+    color: '#e3bb76',
+    radius: 2,
+    story: "Venus is Earth's toxic twin, a hellish sphere cloaked in sulfurous clouds. Beneath its thick carbon dioxide canopy lies a runaway greenhouse nightmare with a crushing pressure ninety times that of Earth. Soviet Venera landers in the 1970s braved the acid rain to reveal Venus's volcanic geology, sending back historic panoramic views before melting under the extreme 900-degree surface heat."
   },
-  Earth: { 
-    color: '#3b82f6', 
-    radius: 2, 
-    hasClouds: true, 
-    story: "Earth, the vibrant blue marble, stands as a rare oasis of biological wonder. Wrapped in a nitrogen-oxygen shield and driven by active plate tectonics, it is the only world known to harbor life. Its oceans contain nearly all of our planet's water, stabilized by a perfectly sized Moon and protected by a robust iron-core magnetic field that deflects lethal solar cosmic radiation." 
+  Earth: {
+    color: '#3b82f6',
+    radius: 2,
+    hasClouds: true,
+    story: "Earth, the vibrant blue marble, stands as a rare oasis of biological wonder. Wrapped in a nitrogen-oxygen shield and driven by active plate tectonics, it is the only world known to harbor life. Its oceans contain nearly all of our planet's water, stabilized by a perfectly sized Moon and protected by a robust iron-core magnetic field that deflects lethal solar cosmic radiation."
   },
-  Moon: { 
-    color: '#d1d5db', 
-    radius: 0.5, 
-    story: "The Moon is Earth's silent companion, holding the key to our cosmic infancy. Formed from a cataclysmic planetary collision four billion years ago, its scarred cratered plains tell the story of the solar system's early bombardment. Visited by Apollo 11 in 1969, its dust holds ancient volcanic history, and its gravity continues to stabilize Earth's seasonal rotation and guide our tidal cycles." 
+  Moon: {
+    color: '#d1d5db',
+    radius: 0.5,
+    story: "The Moon is Earth's silent companion, holding the key to our cosmic infancy. Formed from a cataclysmic planetary collision four billion years ago, its scarred cratered plains tell the story of the solar system's early bombardment. Visited by Apollo 11 in 1969, its dust holds ancient volcanic history, and its gravity continues to stabilize Earth's seasonal rotation and guide our tidal cycles."
   },
-  Mars: { 
-    color: '#ef4444', 
-    radius: 1.6, 
-    story: "Mars, the iron-dusted Red Planet, whispers secrets of ancient rivers and frozen lakes. Billions of years ago, magnetic fields shielded active liquid water systems flowing across its vast surface. Modern robotic explorers, from the Curiosity and Perseverance rovers to orbiters, have confirmed ancient lake beds in Gale Crater, setting the stage for humanity's first deep-space colony." 
+  Mars: {
+    color: '#ef4444',
+    radius: 1.6,
+    story: "Mars, the iron-dusted Red Planet, whispers secrets of ancient rivers and frozen lakes. Billions of years ago, magnetic fields shielded active liquid water systems flowing across its vast surface. Modern robotic explorers, from the Curiosity and Perseverance rovers to orbiters, have confirmed ancient lake beds in Gale Crater, setting the stage for humanity's first deep-space colony."
   },
-  Jupiter: { 
-    color: '#c0a480', 
-    radius: 3, 
-    story: "Jupiter, the colossal sovereign of gas giants, holds more mass than all other planets combined. Beneath its beautiful banded storm clouds lies a metallic hydrogen core generating a gigantic magnetic field. Visited by Pioneer, Voyager, and the Galileo probes, its swirling Great Red Spot storm has raged for over three centuries, surrounded by a court of ocean moons like Europa." 
+  Jupiter: {
+    color: '#c0a480',
+    radius: 3,
+    story: "Jupiter, the colossal sovereign of gas giants, holds more mass than all other planets combined. Beneath its beautiful banded storm clouds lies a metallic hydrogen core generating a gigantic magnetic field. Visited by Pioneer, Voyager, and the Galileo probes, its swirling Great Red Spot storm has raged for over three centuries, surrounded by a court of ocean moons like Europa."
   },
-  Saturn: { 
-    color: '#fef3c7', 
-    radius: 2.8, 
-    hasRings: true, 
-    story: "Saturn is the jewel of the cosmos, adorned with a spectacular ring system spanning 175,000 miles. Composed of countless billions of highly reflective water ice fragments, these rings dance in perfect orbital alignment. The Cassini probe revealed Saturn's intense storms, and mapped its gas-giant moons Titan and Enceladus, which harbor active hydrocarbon lakes and thermal ocean vents." 
+  Saturn: {
+    color: '#fef3c7',
+    radius: 2.8,
+    hasRings: true,
+    story: "Saturn is the jewel of the cosmos, adorned with a spectacular ring system spanning 175,000 miles. Composed of countless billions of highly reflective water ice fragments, these rings dance in perfect orbital alignment. The Cassini probe revealed Saturn's intense storms, and mapped its gas-giant moons Titan and Enceladus, which harbor active hydrocarbon lakes and thermal ocean vents."
   },
-  Uranus: { 
-    color: '#4b70dd', 
-    radius: 2.4, 
-    story: "Uranus is the enigmatic sideways ice giant, tilted at a bizarre 98-degree angle. This extreme tilt causes Uranus to roll around the Sun, resulting in decades-long seasonal days. Wrapped in a pale cyan methane shroud, Voyager 2 discovered a freezing complex ring system and extreme magnetic field profiles, suggesting an interior rich in active diamond rain storms." 
+  Uranus: {
+    color: '#4b70dd',
+    radius: 2.4,
+    story: "Uranus is the enigmatic sideways ice giant, tilted at a bizarre 98-degree angle. This extreme tilt causes Uranus to roll around the Sun, resulting in decades-long seasonal days. Wrapped in a pale cyan methane shroud, Voyager 2 discovered a freezing complex ring system and extreme magnetic field profiles, suggesting an interior rich in active diamond rain storms."
   },
-  Neptune: { 
-    color: '#274687', 
-    radius: 2.3, 
-    story: "Neptune, the dark blue sentinel, reigns at the freezing outer boundaries of the solar system. Driven by supersonic winds reaching 1,200 miles per hour, this active ice giant is whipped by colossal dark storm vortices. Voyager 2 revealed a turbulent planetary weather system and explored its captured icy moon Triton, which orbits backward and shoots giant cryogenic geysers into space." 
+  Neptune: {
+    color: '#274687',
+    radius: 2.3,
+    story: "Neptune, the dark blue sentinel, reigns at the freezing outer boundaries of the solar system. Driven by supersonic winds reaching 1,200 miles per hour, this active ice giant is whipped by colossal dark storm vortices. Voyager 2 revealed a turbulent planetary weather system and explored its captured icy moon Triton, which orbits backward and shoots giant cryogenic geysers into space."
   },
 };
 
 // Speech Synthesis Helper Function
-const speakText = (text: string) => {
+const speakText = (
+  text: string,
+  onBoundary?: (charIndex: number) => void,
+  onEnd?: () => void
+) => {
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
     const cleanText = text.replace(/<[^>]*>/g, '');
     const utterance = new SpeechSynthesisUtterance(cleanText);
-    
+
     const setVoiceAndSpeak = () => {
       const voices = window.speechSynthesis.getVoices();
       // Try to find a highly soothing natural english voice
-      const desiredVoice = voices.find(v => 
-        v.lang.startsWith('en') && 
+      const desiredVoice = voices.find(v =>
+        v.lang.startsWith('en') &&
         (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('David') || v.name.includes('Hazel') || v.name.includes('Zira'))
       );
       if (desiredVoice) utterance.voice = desiredVoice;
       utterance.rate = 0.82; // Calmer, slower cinematic speed
       utterance.pitch = 0.85; // Deeper resonant baritone
       utterance.volume = 1.0;
+
+      if (onBoundary) {
+        utterance.onboundary = (event: any) => {
+          if (event.name === 'word') {
+            onBoundary(event.charIndex);
+          }
+        };
+      }
+
+      if (onEnd) {
+        utterance.onend = () => {
+          onEnd();
+        };
+      }
+
       window.speechSynthesis.speak(utterance);
     };
 
@@ -151,6 +170,9 @@ export default function StorytellingView() {
   const { selectedEntity, setSelectedEntity, setAppMode, audioEnabled, setAudioEnabled } = useSpaceContext();
   const [phase, setPhase] = useState(0);
   const [typedText, setTypedText] = useState('');
+  const [narrationTrigger, setNarrationTrigger] = useState(0);
+  const targetCharIndexRef = useRef(0);
+  const boundaryFiredRef = useRef(false);
 
   useEffect(() => {
     const t1 = setTimeout(() => setPhase(1), 2000);
@@ -161,54 +183,98 @@ export default function StorytellingView() {
   const data = selectedEntity ? STORY_DATA[selectedEntity] : null;
   const storyText = data?.story || '';
 
-  // Trigger voice narration when phase 2 is reached and audio is enabled
+  // Synchronized voice narration and typewriter loop
   useEffect(() => {
-    if (phase === 2 && audioEnabled && storyText) {
-      speakText(storyText);
-    } else {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
+    if (phase < 2 || !storyText) {
+      setTypedText('');
+      targetCharIndexRef.current = 0;
+      boundaryFiredRef.current = false;
+      return;
     }
+
+    setTypedText('');
+    targetCharIndexRef.current = 0;
+    boundaryFiredRef.current = false;
+
+    let currentLength = 0;
+    let timerFallbackActive = !audioEnabled;
+    let fallbackCharIndex = 0;
+
+    // Fallback typing timer when audio is muted or boundary events are unsupported
+    const fallbackInterval = setInterval(() => {
+      if (timerFallbackActive) {
+        fallbackCharIndex = Math.min(storyText.length, fallbackCharIndex + 1);
+        targetCharIndexRef.current = fallbackCharIndex;
+      }
+    }, 28);
+
+    // Watchdog: If audio is enabled but no boundary signals are received in 1.5s, trigger fallback timer
+    const watchdog = setTimeout(() => {
+      if (audioEnabled && !boundaryFiredRef.current) {
+        timerFallbackActive = true;
+        fallbackCharIndex = currentLength;
+      }
+    }, 1500);
+
+    // Start voice and pipe actual boundary indices directly into targetCharIndexRef
+    if (audioEnabled) {
+      speakText(
+        storyText,
+        (charIndex) => {
+          boundaryFiredRef.current = true;
+          timerFallbackActive = false; // Turn off fallback timer, speech boundaries are active
+
+          // Scan forward to print complete words instead of breaking them mid-character
+          let endOfWordIndex = charIndex;
+          while (
+            endOfWordIndex < storyText.length &&
+            storyText[endOfWordIndex] !== ' ' &&
+            storyText[endOfWordIndex] !== '.' &&
+            storyText[endOfWordIndex] !== ',' &&
+            storyText[endOfWordIndex] !== ';' &&
+            storyText[endOfWordIndex] !== '—'
+          ) {
+            endOfWordIndex++;
+          }
+          targetCharIndexRef.current = Math.min(storyText.length, endOfWordIndex);
+        },
+        () => {
+          // Speak completed, type the remainder
+          targetCharIndexRef.current = storyText.length;
+        }
+      );
+    }
+
+    // High-frequency interpolation rendering loop running at 12ms
+    const animationInterval = setInterval(() => {
+      if (currentLength < targetCharIndexRef.current) {
+        currentLength++;
+        setTypedText(storyText.slice(0, currentLength));
+      } else if (!audioEnabled && currentLength >= storyText.length) {
+        clearInterval(animationInterval);
+      }
+    }, 12);
+
     return () => {
+      clearInterval(fallbackInterval);
+      clearInterval(animationInterval);
+      clearTimeout(watchdog);
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
       }
     };
-  }, [phase, audioEnabled, storyText]);
-
-  // Synchronized typewriter effect inside phase 2
-  useEffect(() => {
-    if (phase < 2 || !storyText) {
-      setTypedText('');
-      return;
-    }
-
-    let currentLength = 0;
-    setTypedText('');
-    
-    const timer = setInterval(() => {
-      currentLength++;
-      setTypedText(storyText.slice(0, currentLength));
-      
-      if (currentLength >= storyText.length) {
-        clearInterval(timer);
-      }
-    }, 28); // 28ms prints letters beautifully in lockstep with the slower pacing
-
-    return () => clearInterval(timer);
-  }, [phase, storyText]);
+  }, [phase, audioEnabled, storyText, narrationTrigger]);
 
   if (!selectedEntity || !data) return null;
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 1 } }}
       className="absolute inset-0 z-50 bg-black overflow-hidden"
     >
-      <button 
+      <button
         onClick={() => {
           if ('speechSynthesis' in window) {
             window.speechSynthesis.cancel();
@@ -224,24 +290,23 @@ export default function StorytellingView() {
       {/* Right Floating Audio Controls Overlay */}
       <div className="absolute top-8 right-8 z-50 flex items-center gap-3">
         {audioEnabled && phase >= 2 && (
-          <motion.button 
+          <motion.button
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            onClick={() => speakText(data.story)}
+            onClick={() => setNarrationTrigger(prev => prev + 1)}
             className="p-4 rounded-full bg-black/50 hover:bg-white/10 border border-white/20 text-slate-300 hover:text-white transition backdrop-blur-md flex items-center justify-center cursor-pointer hover:border-neon-blue"
             title="Re-narrate Story"
           >
             <RotateCcw size={20} />
           </motion.button>
         )}
-        
-        <button 
+
+        <button
           onClick={() => setAudioEnabled(!audioEnabled)}
-          className={`p-4 rounded-full transition backdrop-blur-md flex items-center gap-3 border shadow-lg cursor-pointer ${
-            audioEnabled 
-              ? 'bg-neon-blue/20 border-neon-blue text-neon-blue shadow-[0_0_15px_rgba(0,240,255,0.3)]' 
+          className={`p-4 rounded-full transition backdrop-blur-md flex items-center gap-3 border shadow-lg cursor-pointer ${audioEnabled
+              ? 'bg-neon-blue/20 border-neon-blue text-neon-blue shadow-[0_0_15px_rgba(0,240,255,0.3)]'
               : 'bg-black/50 border-white/20 text-slate-400 hover:text-white hover:border-white/40'
-          }`}
+            }`}
           title={audioEnabled ? "Mute Narrator" : "Enable AI Narrator"}
         >
           {audioEnabled ? (
@@ -283,9 +348,9 @@ export default function StorytellingView() {
           <ambientLight intensity={0.05} />
           <directionalLight position={[10, 5, -5]} intensity={3} color="#ffffff" />
           <directionalLight position={[-10, -5, 5]} intensity={0.5} color={data.color} />
-          
+
           <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={0.5} />
-          
+
           <CinematicPlanet config={data} name={selectedEntity || ''} />
           <CameraRig />
 
@@ -301,7 +366,7 @@ export default function StorytellingView() {
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-24 pointer-events-none p-10 text-center">
         <AnimatePresence>
           {phase >= 1 && (
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, scale: 0.9, letterSpacing: "0.1em" }}
               animate={{ opacity: 1, scale: 1, letterSpacing: "0.5em" }}
               transition={{ duration: 4, ease: "easeOut" }}
@@ -315,7 +380,7 @@ export default function StorytellingView() {
         <AnimatePresence>
           {phase >= 2 && (
             <div className="relative w-full max-w-4xl">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="absolute -top-12 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs font-bold tracking-widest text-neon-blue uppercase drop-shadow-[0_0_8px_rgba(0,240,255,0.6)]"
@@ -323,7 +388,7 @@ export default function StorytellingView() {
                 <Radio size={14} className="animate-pulse text-neon-blue" />
                 Cosmic Transmission
               </motion.div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
